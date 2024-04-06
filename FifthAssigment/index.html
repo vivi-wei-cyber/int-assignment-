@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Vivi's assignment of personal project called “Through the Wormhole” </title>
+<H1 style="color: white;">Vivi's assignment of personal project called “Through the Wormhole</H1>
+
+<link rel="stylesheet" href="style.css" />
+<style>
+  body {
+    background-color: black;
+    color: white;
+  }
+</style>
+</head>
+
+   <p style="color: white;">The concept of traversing wormholes aims to control the acceleration of asteroids crossing the universe by manipulating distance in space, creating a unique experience. Inspired by science fiction literature and films, this concept immerses people into the unknown wonders of the cosmos. Traversing wormholes is not merely a physical journey but also a spiritual exploration. It delves into the intertwining of time and space, as well as humanity's eternal quest for the unknown. In this space art project, we whisk the audience into the vortex of a wormhole, allowing them to feel the distortion of time and space, and the revelation of endless possibilities in the universe. Through the fusion of art and science, we open a door to uncharted territories, infusing the journey of humanity's exploration of cosmic mysteries with boundless imagination and creativity.</p> 
+
+<div class="column2">      
+    <!-- 本地图片路径替换为实际路径 -->
+    
+    <img src="./1.png" alt="Local Image" width="100%">
+  </div>
+  <div class="column2">      
+    <!-- 本地图片路径替换为实际路径 -->
+    
+    <img src="./2.png" alt="Local Image" width="100%">
+  </div>
+
+
+<div class="container">
+  <div class="column1">
+      <p style="color: white;">I utilized the torus component to craft trajectories for the journey through space and asteroids, resembling a donut-shaped path. Adjusting both the radius of the track and the radius of the inner space within the torus, I refined the dimensions of the trajectory. By connecting to the geometry, I established a three-dimensional space for the object. Subsequently, I incorporated the rendering trio: camera, light, and render.</p>
+      <p style="color: white;">Next, I began creating a core element: the asteroid particles. I established a sphere component, introducing noise elements to disrupt its regularity, thus adding texture to the asteroids. Simultaneously, I created a three-dimensional space to position my core objects, the asteroid chunks. Within the geometry viewer, I adjusted their spatial relations, utilizing shortcuts like pressing the 'H' key to inspect their overall arrangement. Here, I learned several shortcut commands: left mouse button for rotation, right mouse button for translation, and scrolling the mouse wheel for zooming in and out. Moving forward, my aim was to place the asteroid chunks, lights, and camera into the tunnel. Initially, I resized them and then adjusted their positions (translation). However, I soon realized that random adjustments to their positions didn't achieve the desired visual effect. Consequently, I created a circle to serve as the trajectory for the camera, lights, and core objects. I matched the radius of the circle with that of the torus, setting both to a value of 3. I then configured the path sop of the camera, lights, and core objects to align with the circle. By tweaking the positions, I established the relative placement of each object within the cosmic environment.</p>
+      <p style="color: white;">Now, I'm moving on to apply materials. This time, I'm using the PBR material component, which is my first encounter with it. I drag the PBR component into geo1 and select it as the material. To create an environment map, I need to set up an environment light. Then, I adjust the roughness level in the parameters page of the PBR material. Additionally, I apply a rough surface texture to the torus by adding a noise component.</p>
+      <p style="color: white;">Now, I'm diving into animation! I'm employing a clever technique where I use the motion of the track instead of the movement of the asteroid chunks, reducing workload and lowering the CPU burden. Adjusting the translate Y of geometry1 enables the motion of the cosmos, creating a shuttle-like effect. Thus, I assign a Python code to translate Y: absTime.seconds * 5. However, I want to control the speed of the asteroid shuttle interactively through an ultrasonic sensor. For this purpose, I opt to use the speed component to regulate its velocity. The value of the speed component determines the rotation angle of the tunnel, while the constant component dictates the speed of the tunnel's motion. Finally, I give the asteroid chunks a rocky texture. Within the substance (top) component, I apply a Python expression absTime.seconds * 7 to rotate geometry2, completing the animation section!.</p>
+      <p style="color: white;">I noticed that the visual effect wasn't satisfactory because the camera was too stable, lacking movement. To address this, I created a constant component to control the camera's rotational motion. Similarly, I duplicated the process to control the position of the asteroids in space (position in geometry2). Finally, I adjusted the color and position of the lights. With these changes, my animation segment is now complete! The next step is to begin working on the interactive part!</p>
+      
+     
+        <div style="max-width: 100%; overflow: hidden; position: relative;">
+          <div style="padding-bottom: 56.25%; /* 16:9 宽高比例 */">
+            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/aNGZkyfBI00?si=zN4eAir-lltJL25d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div style="max-width: 100%; overflow: hidden; position: relative;">
+          <div style="padding-bottom: 56.25%; /* 16:9 宽高比例 */">
+            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/IrzhmjMU2DY?si=TUohLSnPsVNQHKJ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>  
+        </div>
+  </div>
+</div>
+</html>
